@@ -1,1 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paassite Dashboard</title>
+    <!-- Tailwind CSS CDN for quick modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom Railway-like Dark Theme Colors */
+        body {
+            background-color: #0b0f19;
+            color: #ffffff;
+        }
+        .dashboard-card {
+            background-color: #111827;
+            border: 1px solid #1f2937;
+        }
+        .dashboard-card:hover {
+            border-color: #374151;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased h-screen flex flex-col">
 
+    <!-- Top Navbar -->
+    <nav class="border-b border-gray-800 bg-[#0b0f19] px-6 py-4 flex items-center justify-between">
+        <div class="flex items-center space-x-6">
+            <!-- Logo -->
+            <div class="font-bold text-xl tracking-tight cursor-pointer">▲ Paassite</div>
+            <!-- Links -->
+            <div class="hidden md:flex space-x-6 text-sm text-gray-400">
+                <a href="#" class="hover:text-white transition">Projects</a>
+                <a href="#" class="hover:text-white transition">Deployments</a>
+                <a href="#" class="hover:text-white transition">Settings</a>
+            </div>
+        </div>
+        <!-- Profile / Status -->
+        <div class="text-xs font-semibold bg-gray-800 text-gray-300 px-3 py-1.5 rounded-md">
+            Render Test Mode
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow p-6 md:p-12 max-w-6xl mx-auto w-full">
+        <header class="mb-8 flex justify-between items-center">
+            <div>
+                <h1 class="text-3xl font-semibold mb-2">Dashboard</h1>
+                <p class="text-gray-400 text-sm">View and manage your active deployments.</p>
+            </div>
+            <button class="bg-white text-black px-4 py-2 rounded-md font-medium text-sm hover:bg-gray-200 transition">
+                New Project
+            </button>
+        </header>
+
+        <!-- Projects Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Single Project Card -->
+            <div class="dashboard-card rounded-lg p-6 transition cursor-pointer">
+                <div class="flex justify-between items-start mb-4">
+                    <!-- App Icon -->
+                    <div class="h-10 w-10 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-md flex items-center justify-center font-bold text-lg">P</div>
+                    <!-- Live Status Indicator (Blinking Green Dot) -->
+                    <span class="flex h-3 w-3 relative mt-1">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                    </span>
+                </div>
+                <h2 class="text-lg font-medium mb-1">Paassite Server</h2>
+                <p class="text-sm text-gray-500 mb-4">nonohub.eu.cc</p>
+                <div class="text-xs text-gray-400 border-t border-gray-800 pt-3 flex justify-between">
+                    <span>Python 3 • Flask</span>
+                    <span>Just updated</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
