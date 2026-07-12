@@ -1,1 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - Paassite</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans antialiased h-screen flex flex-col">
+    <!-- Navbar -->
+    <nav class="border-b border-slate-200 bg-white px-6 py-4 flex items-center justify-between shadow-sm">
+        <div class="font-bold text-xl text-sky-600 tracking-tight">▲ Paassite</div>
+        <div class="text-sm font-semibold bg-sky-100 text-sky-700 px-3 py-1.5 rounded-md">
+            Logged In
+        </div>
+    </nav>
 
+    <!-- Main Content -->
+    <main class="flex-grow p-6 md:p-12 max-w-6xl mx-auto w-full">
+        <header class="mb-8 flex justify-between items-center">
+            <div>
+                <h1 class="text-3xl font-semibold mb-2">My Dashboard</h1>
+                <p class="text-slate-500 text-sm">Manage your active projects.</p>
+            </div>
+            <button class="bg-sky-500 text-white px-4 py-2 rounded-md font-medium text-sm hover:bg-sky-600 transition">
+                New Project
+            </button>
+        </header>
+
+        <!-- Project Card -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white border border-slate-200 rounded-lg p-6 shadow-sm hover:border-sky-300 transition cursor-pointer">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="h-10 w-10 bg-sky-100 text-sky-600 rounded-md flex items-center justify-center font-bold text-lg">P</div>
+                    <span class="flex h-3 w-3 relative mt-1">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                    </span>
+                </div>
+                <h2 class="text-lg font-medium mb-1">Testing Server</h2>
+                <p class="text-sm text-slate-500 mb-4">Live and active</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
